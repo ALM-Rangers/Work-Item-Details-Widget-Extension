@@ -4,31 +4,31 @@
 
 The **Work Item Details Widget** displays a card with some details of an Work item on your dashboards.
 
-![detailed cards](/src/img/detailed-cards.png)
+![detailed cards](src/img/detailed-cards.png)
 
 ## Quick steps to get started ###
 
 ### Method 1
 
-- Edit ![](/src/img/overview_edit.png) your dashboard [1]
+- Edit ![](src/img/overview_edit.png) your dashboard [1]
 - Select the 'Work item details' widget [2]
 - Click Add to add the widget to your dashboard [3]
-- Click ![](/src/img/configure.png) on the widget [4]
+- Click ![](src/img/configure.png) on the widget [4]
 
-	![add widget](/src/img/add-widget-steps.png)
+	![add widget](src/img/add-widget-steps.png)
 
 - Enter a Work Item Id and tab out of the text box [5]
 - Click on Save [6]
 
-	![add wi](/src/img/wi-id-configuration.png)
+	![add wi](src/img/wi-id-configuration.png)
 
 ### Method 2
 
-- Select the context menu ![](/src/img/context.png) on any work item list, work item dialog, or board [1]
+- Select the context menu ![](src/img/context.png) on any work item list, work item dialog, or board [1]
 - Select the item 'Add to dashboard' [2]
 - Select the desired dashboard [3]
 
-	![add to dashboard](/src/img/add-dashboard.png)
+	![add to dashboard](src/img/add-dashboard.png)
 
 ### Notes
 
