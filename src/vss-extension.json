@@ -1,0 +1,123 @@
+{
+  "manifestVersion": 1,
+  "id": "",
+  "version": "",
+  "name": "",
+  "scopes": [ "vso.work", "vso.dashboards_manage" ],
+  "description": "View details of work item on your dashboard",
+  "publisher": "",
+  "icons": {
+    "default": "img/logo.png"
+  },
+  "categories": [
+    "Integrate"
+  ],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services.Cloud"
+    }
+  ],
+  "tags": [
+    "Work Items",
+    "Widget"
+  ],
+  "links": {
+    "support": {
+      "uri": "http://aka.ms/vsarcontact"
+    }
+  },
+  "branding": {
+    "color": "rgb(51,65,133)",
+    "theme": "dark"
+  },
+  "content": {
+    "license": {
+      "path": "mp_terms.md"
+    },
+    "details": {
+      "path": "overview.md"
+    }
+  },
+  "files": [
+    {
+      "path": "overview.md",
+      "addressable": true
+    },
+    {
+      "path": "css",
+      "addressable": true
+    },
+    {
+      "path": "img",
+      "addressable": true
+    },
+    {
+      "path": "scripts",
+      "addressable": true
+    },
+    {
+      "path": "index.html",
+      "addressable": true
+    },
+    {
+      "path": "configuration.html",
+      "addressable": true
+    },
+    {
+      "path": "addtodashboard.html",
+      "addressable": true
+    },
+    {
+      "path": "ThirdPartyNotices.txt",
+      "addressable": true
+    }
+  ],
+  "contributions": [
+    {
+      "id": "addToDashboard-work-item-menu",
+      "type": "ms.vss-web.action-provider",
+      "description": "",
+      "targets": [
+        "ms.vss-work-web.work-item-context-menu"
+      ],
+      "properties": {
+        "group": "contributed",
+        "uri": "addtodashboard.html"
+      }
+    },
+    {
+      "id": "widetailswidget",
+      "type": "ms.vss-dashboards-web.widget",
+      "targets": [
+        "ms.vss-dashboards-web.widget-catalog",
+        ".widetailswidget-Configuration"
+      ],
+      "properties": {
+        "name": "Work Item details Widget",
+        "description": "View work item details",
+        "uri": "index.html",
+        "isNameConfigurable": false,
+        "catalogIconUrl:": "img/logo.png",
+        "previewImageUrl": "img/logo.png",
+        "supportedSizes": [
+          {
+            "rowSpan": 1,
+            "columnSpan": 2
+          }
+        ],
+        "supportedScopes": [ "project_team" ]
+      }
+    },
+    {
+      "id": "widetailswidget-Configuration",
+      "type": "ms.vss-dashboards-web.widget-configuration",
+      "targets": [ "ms.vss-dashboards-web.widget-configuration" ],
+      "properties": {
+        "name": "Work item details Widget Configuration",
+        "description": "Configure Work item details Widget",
+        "uri": "configuration.html"
+      }
+    }
+
+  ]
+}

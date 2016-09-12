@@ -1,0 +1,88 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.defaultcontent {
+    top: 55%;
+    padding-top:40px;
+}
+
+.widget-message-text {
+    text-align: center;
+    font-size: 18px;
+    color: grey;
+}
+
+
+.wi-header {
+    border-left-style: solid;
+    border-left-width: 7px;
+    height: 45px;
+}
+
+.wi-type{
+    font-size:10px;
+    padding:3px 3px 3px 5px;
+    text-transform:uppercase;
+}
+
+.wi-title {
+    padding-left:5px;
+    font-weight: normal;
+    font-size: 15px;
+    overflow: hidden;
+    height:20px;
+
+}
+
+.wi-desc {
+    padding: 2px 12px;
+    height: 50px;
+    font-size: 11px;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.wi-updated {
+    height: 20px;
+    font-size: 11px;
+    color: gray;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.wi-assigned {
+    padding-left: 10px;
+    padding-top: 15px;
+    float: left;
+}
+
+.assignavatar {
+    float: left;
+    padding-right: 8px;
+}
+
+.assignuser {
+    float: right;
+    height: 25px;
+    padding-top:5px;
+}
+
+.wi-state{
+    float:right;
+    margin-right:10px;
+    margin-top:20px;
+}
+
+
+.workitem-state-circle {
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: left;
+    width: 8px !important;
+    height: 8px !important;
+    transition: background-color linear .2s;
+}

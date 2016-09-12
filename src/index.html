@@ -1,0 +1,88 @@
+﻿<!-- ---------------------------------------------------------------------
+// <copyright file="index.html">
+//    This code is licensed under the MIT License.
+//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+//    ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+//    TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+//    PARTICULAR PURPOSE AND NONINFRINGEMENT.
+// </copyright>
+// <summary>
+// widget main page
+// </summary>
+//---------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <style>
+        .bgImage {
+            background-image: url('img/unconfigured-small.png');
+            height: 40px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="widget" style="cursor:pointer;padding:0 0 0 0">
+        <div id="content">
+           
+            <div class="wi-header" id="wi-header">
+                <div class="wi-type" id="wi-type"></div>
+                <div class="wi-title" id="wi-title"></div>
+            </div>
+            <div class="wi-desc" id="wi-desc">
+
+            </div>
+            <div class="wi-updated"><div class="updateby" id="updateby"></div><div class="updatedate" id="updatedate"></div></div>
+            <div class="wi-assigned"><div class="assignavatar"><img width="22" height="22" id="assignavatar" /></div><div class="assignuser" id="assignuser"></div></div>
+            <div class="wi-state" id="wi-state">
+                <span id="state"></span>
+                <span class="workitem-state-circle" id="statecircle"></span>
+            </div>
+        </div>
+        <div class="defaultcontent" style="display: block;" id="configwidget">
+            <div class="widget-message-text">Configure widget</div>
+            <div class="bgImage"></div>
+            <span class="link-text"></span>
+        </div>
+        <div class="loadingcontent" style="display: block;" id="loadingwidget">
+            <div style="margin:10px;background-color:lightgray;height:40px;opacity:0.5"></div>
+            <div style="margin:10px;background-color:lightgray;height:85px;opacity:0.5"></div>
+        </div>
+        <div id="contentError">
+
+        </div>
+    </div>
+
+
+    <script src="scripts/VSS.SDK.js"></script>
+    <script src="scripts/ai.0.22.19-build00125.min.js"></script>
+    <script src="scripts/TelemetryClient.js"></script>
+    <script src="scripts/jquery-2.2.0.min.js"></script>
+    <script src="scripts/jquery.dotdotdot.min.js"></script>
+    <script type="text/javascript">
+        // Initialize the VSS sdk
+        VSS.init({
+            explicitNotifyLoaded: true,
+            setupModuleLoader: true,
+            usePlatformScripts: true,
+            usePlatformStyles: true,
+            moduleLoaderConfig: {
+                paths: {
+                    "Scripts": "scripts"
+                }
+            }
+        });
+
+        // Wait for the SDK to be initialized
+        VSS.ready(function () {
+            require(["Scripts/main"], function (app) {});
+        });
+    </script>
+</body>
+</html>

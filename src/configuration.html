@@ -1,0 +1,53 @@
+﻿<!-- ---------------------------------------------------------------------
+// <copyright file="configuration.html">
+//    This code is licensed under the MIT License.
+//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+//    ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+//    TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+//    PARTICULAR PURPOSE AND NONINFRINGEMENT.
+// </copyright>
+// <summary>
+// configuration
+// </summary>
+//---------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/app.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="widget-configuration">
+
+        <div class="single-line-text-input" id="linewi">
+            <label>Work item Id</label>
+            <input type="text" id="wiid" required>
+            <span class="validation-error">
+                <span class="icon-error-exclamation"></span>
+                <span class="validation-error-text"></span>
+            </span>
+        </div>
+    </div>
+    <script src="scripts/VSS.SDK.js"></script>
+    <script src="scripts/ai.0.22.19-build00125.min.js"></script>
+    <script src="scripts/TelemetryClient.js"></script>
+    <script type="text/javascript">
+        VSS.init({
+            explicitNotifyLoaded: true,
+            usePlatformStyles: true,
+            usePlatformScripts: true,
+            setupModuleLoader: true,
+            moduleLoaderConfig: {
+                paths: {
+                    "Scripts": "scripts"
+                }
+            }
+        });
+
+        VSS.ready(function () {
+            require(["Scripts/configuration"], function (configuration) { });
+        });
+    </script>
+</body>
+</html>
