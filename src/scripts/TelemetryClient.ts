@@ -29,7 +29,7 @@ class TelemetryClient {
 
     private Init() {
         var Key_dev = "xxxxxxx";
-        var Key_MsLabs = "c9f3e036-fca9-4f18-85a4-da4bcc06c3aa";
+        var Key_MsLabs = "__INSTRUMENTATIONKEY__";
         try {
             var snippet: any = {
                 config: {
