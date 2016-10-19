@@ -93,7 +93,7 @@
         ".widetailswidget-Configuration"
       ],
       "properties": {
-        "name": "Work Item details Widget",
+        "name": "Work Item Details",
         "description": "View work item details",
         "uri": "index.html",
         "isNameConfigurable": false,
