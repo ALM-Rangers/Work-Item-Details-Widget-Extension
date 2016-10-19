@@ -4,7 +4,7 @@
   "version": "",
   "name": "",
   "scopes": [ "vso.work", "vso.dashboards_manage" ],
-  "description": "View details of work item on your dashboard",
+  "description": "View details of work item on your dashboard.",
   "publisher": "",
   "icons": {
     "default": "img/logo.png"
@@ -94,7 +94,7 @@
       ],
       "properties": {
         "name": "Work Item Details",
-        "description": "View work item details",
+        "description": "View details of work item on your dashboard.",
         "uri": "index.html",
         "isNameConfigurable": false,
         "catalogIconUrl:": "img/logo.png",
@@ -113,8 +113,8 @@
       "type": "ms.vss-dashboards-web.widget-configuration",
       "targets": [ "ms.vss-dashboards-web.widget-configuration" ],
       "properties": {
-        "name": "Work item details Widget Configuration",
-        "description": "Configure Work item details Widget",
+        "name": "Work Item Details Configuration",
+        "description": "Configure Work Item Details widget.",
         "uri": "configuration.html"
       }
     }
