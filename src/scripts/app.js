@@ -9,11 +9,11 @@
 // <summary>
 // </summary>
 //---------------------------------------------------------------------
+/// <reference path="../typings/tsd.d.ts" />
+/// <reference path="../typings/jquery/jquery.d.ts" />
+/// <reference path="jquery.dotdotdot.d.ts" />
+"use strict";
 define(["require", "exports", "TFS/Work/RestClient", "TFS/WorkItemTracking/RestClient", "TFS/WorkItemTracking/Services"], function (require, exports, RestClient, RestClientWI, WorkItemServices) {
-    /// <reference path="../typings/tsd.d.ts" />
-    /// <reference path="../typings/jquery/jquery.d.ts" />
-    /// <reference path="jquery.dotdotdot.d.ts" />
-    "use strict";
     var WidgetWIDetails = (function () {
         function WidgetWIDetails(WidgetHelpers) {
             this.WidgetHelpers = WidgetHelpers;
@@ -245,7 +245,7 @@ define(["require", "exports", "TFS/Work/RestClient", "TFS/WorkItemTracking/RestC
             return this.LoadWIDetails(widgetSettings);
         };
         return WidgetWIDetails;
-    }());
+    })();
     exports.WidgetWIDetails = WidgetWIDetails;
 });
 //# sourceMappingURL=app.js.map

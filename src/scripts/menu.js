@@ -8,9 +8,9 @@
 // </copyright>
 // <summary>TypeScript file for work item details widget extension</summary>
 //---------------------------------------------------------------------
+/// <reference path='../typings/tsd.d.ts' />
+"use strict";
 define(["require", "exports", "VSS/Authentication/Services"], function (require, exports, Services) {
-    /// <reference path='../typings/tsd.d.ts' />
-    "use strict";
     var WiMenu = (function () {
         function WiMenu() {
         }
@@ -97,7 +97,7 @@ define(["require", "exports", "VSS/Authentication/Services"], function (require,
             return deferred.promise();
         };
         return WiMenu;
-    }());
+    })();
     exports.WiMenu = WiMenu;
     ;
     var contributionId = VSS.getExtensionContext().publisherId + "." + VSS.getExtensionContext().extensionId + ".addToDashboard-work-item-menu";

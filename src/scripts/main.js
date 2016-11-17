@@ -8,10 +8,10 @@
 // </copyright>
 // <summary>TypeScript file for work item details widget extension</summary>
 //---------------------------------------------------------------------
+/// <reference path='../typings/tsd.d.ts' />
+/// <reference path='isettings.d.ts' />
+"use strict";
 define(["require", "exports", "scripts/app"], function (require, exports, WiDetailsWidget) {
-    /// <reference path='../typings/tsd.d.ts' />
-    /// <reference path='isettings.d.ts' />
-    "use strict";
     VSS.require("TFS/Dashboards/WidgetHelpers", function (WidgetHelpers) {
         WidgetHelpers.IncludeWidgetStyles();
         VSS.register("widetailswidget", function () {
