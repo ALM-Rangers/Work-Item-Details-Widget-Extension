@@ -43,6 +43,7 @@ The [source](https://github.com/ALM-Rangers/Work-Item-Details-Widget-Extension) 
 
 ### Minimum supported environments ###
 - Visual Studio Team Services
+- Team Foundation Server 2017 (or higher)
 
 ### Contributors ###
 We thank the following contributor(s) for this extension: Mikael Krief.
