@@ -104,5 +104,5 @@ var TelemetryClient = (function () {
         }
     };
     return TelemetryClient;
-})();
+}());
 //# sourceMappingURL=TelemetryClient.js.map

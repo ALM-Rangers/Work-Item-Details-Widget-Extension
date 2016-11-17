@@ -106,7 +106,7 @@ export class WidgetWIDetails {
             desc = wi.fields["Microsoft.VSTS.TCM.ReproSteps"];
         }
         if (witype == "Test Case") {
-            desc = ""
+            desc = wi.fields["System.Description"];
         }
         if (desc != undefined) {
             desc = this.noHtml(desc);
