@@ -14,3 +14,4 @@ src/bin
 /.vs/Work-Item-Details-Widget-Extension/v15/.suo
 *.suo
 /.vs
+/src/vsarVSTS-WI-details-widget.csproj.user
