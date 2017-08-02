@@ -1,6 +1,6 @@
 {
     "ApplicationInsights": {
-        "InstrumentationKey": "21100e97-0b88-48ea-a1bb-efa840af423a",
+        "InstrumentationKey": "__INSTRUMENTATIONKEY__",
         "ExtensionContext": "WorkItemDetailsWidget",
         "DisableTelemetry": "false",
         "DisableAjaxTracking": "__disableAjaxTracking__",
