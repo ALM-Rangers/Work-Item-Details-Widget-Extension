@@ -11,3 +11,5 @@ packages
 src/bin
 /.vs/slnx.sqlite-journal
 /.vs/slnx.sqlite
+/.vs/Work-Item-Details-Widget-Extension/v15/.suo
+*.suo
