@@ -35,9 +35,6 @@ The **Work Item Details Widget** displays a card with some details of an Work it
 - You can select multiple work items in a list
 - On the dashboard, click on the widget to open the work item in a modal form 
 
-## Minimum supported environments ###
-- Visual Studio Team Services
-
 ## Contributors ###
 We thank the following contributor(s) for this extension: Mikael Krief.
 
