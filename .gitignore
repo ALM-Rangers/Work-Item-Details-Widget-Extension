@@ -8,3 +8,5 @@ src/.vs
 src/obj
 packages
 *.vsix
+/.vs/slnx.sqlite-journal
+/.vs/slnx.sqlite
