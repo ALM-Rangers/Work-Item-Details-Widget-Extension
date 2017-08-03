@@ -13,12 +13,13 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/app.css" type="text/css" />
     <style>
         .bgImage {
-            background-image: url('img/unconfigured-small.png');
+            background-image: url('images/unconfigured-small.png');
             height: 40px;
             background-position: center;
             background-repeat: no-repeat;
@@ -26,11 +27,12 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="widget" style="cursor:pointer;padding:0 0 0 0">
         <div id="content">
-           
+
             <div class="wi-header" id="wi-header">
                 <div class="wi-type" id="wi-type"></div>
                 <div class="wi-title" id="wi-title"></div>
@@ -38,8 +40,14 @@
             <div class="wi-desc" id="wi-desc">
 
             </div>
-            <div class="wi-updated"><div class="updateby" id="updateby"></div><div class="updatedate" id="updatedate"></div></div>
-            <div class="wi-assigned"><div class="assignavatar"><img width="22" height="22" id="assignavatar" /></div><div class="assignuser" id="assignuser"></div></div>
+            <div class="wi-updated">
+                <div class="updateby" id="updateby"></div>
+                <div class="updatedate" id="updatedate"></div>
+            </div>
+            <div class="wi-assigned">
+                <div class="assignavatar"><img width="22" height="22" id="assignavatar" /></div>
+                <div class="assignuser" id="assignuser"></div>
+            </div>
             <div class="wi-state" id="wi-state">
                 <span id="state"></span>
                 <span class="workitem-state-circle" id="statecircle"></span>
@@ -59,30 +67,24 @@
         </div>
     </div>
 
-
-    <script src="scripts/VSS.SDK.js"></script>
-    <script src="scripts/ai.0.22.19-build00125.min.js"></script>
-    <script src="scripts/TelemetryClient.js"></script>
-    <script src="scripts/jquery-2.2.0.min.js"></script>
-    <script src="scripts/jquery.dotdotdot.min.js"></script>
+    <script src="../lib/VSS.SDK.js"></script>
+    <script src="../lib/ai.0.js"></script>
+    <script src="../lib/jquery.min.js"></script>
+    <script src="../lib/jquery.dotdotdot.min.js"></script>
     <script type="text/javascript">
         // Initialize the VSS sdk
         VSS.init({
             explicitNotifyLoaded: true,
             setupModuleLoader: true,
             usePlatformScripts: true,
-            usePlatformStyles: true,
-            moduleLoaderConfig: {
-                paths: {
-                    "Scripts": "scripts"
-                }
-            }
+            usePlatformStyles: true
         });
 
         // Wait for the SDK to be initialized
         VSS.ready(function () {
-            require(["Scripts/main"], function (app) {});
+            require(["dist/WIDetailsWidget"], function (app) { });
         });
     </script>
 </body>
+
 </html>

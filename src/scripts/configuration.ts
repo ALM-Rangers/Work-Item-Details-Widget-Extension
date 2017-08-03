@@ -1,17 +1,16 @@
-﻿//---------------------------------------------------------------------
+﻿// ---------------------------------------------------------------------
 // <copyright file="configuration.ts">
 //    This code is licensed under the MIT License.
-//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF 
-//    ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
-//    TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+//    ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+//    TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
 //    PARTICULAR PURPOSE AND NONINFRINGEMENT.
 // </copyright>
 // <summary>
 // </summary>
-//---------------------------------------------------------------------
+// ---------------------------------------------------------------------
 
 /// <reference path='isettings.d.ts' />
-/// <reference path='../typings/tsd.d.ts' />
 "use strict";
 import RestClient = require("TFS/Work/RestClient");
 import CoreClient = require("TFS/Core/RestClient");
@@ -22,36 +21,29 @@ import RestClientWI = require("TFS/WorkItemTracking/RestClient");
 export class Configuration {
     widgetConfigurationContext = null;
 
-    $wiid = $('#wiid');
+    $wiid = $("#wiid");
     public client = RestClient.getClient();
     public clientwi = RestClientWI.getClient();
     public clickOnSave = false;
-
 
     public _widgetHelpers;
     constructor(public WidgetHelpers) {
     }
 
-
-
     public load(widgetSettings, widgetConfigurationContext) {
 
-        var _that = this;
+        let _that = this;
 
-        var $wiid = $("#wiid");
-        var $btnsave = $('.btn-cta');
-
+        let $wiid = $("#wiid");
         this.widgetConfigurationContext = widgetConfigurationContext;
 
+        let $errorSingleLineInput = $("#linewi .validation-error-text");
 
-        var $errorSingleLineInput = $("#linewi .validation-error-text");
-
-
-        var settings = JSON.parse(widgetSettings.customSettings.data);
+        let settings = JSON.parse(widgetSettings.customSettings.data);
         if (settings && settings.wiId) {
             $wiid.val(settings.wiId);
         } else {
-            //first load
+            // first load
             $wiid.val("");
         }
 
@@ -67,7 +59,7 @@ export class Configuration {
                 if (reject.status = "404") {
                     $errorSingleLineInput.text("This Work item dosn't exist.");
                     $errorSingleLineInput.parent().css("visibility", "visible");
-                    $('.btn-cta').attr("disabled", "disabled");
+                    $(".btn-cta").attr("disabled", "disabled");
 
                     return _that.WidgetHelpers.WidgetStatusHelper.Failure();
 
@@ -77,14 +69,10 @@ export class Configuration {
         return _that.WidgetHelpers.WidgetStatusHelper.Success();
     }
 
-
-
     private isValidWI(): IPromise<boolean> {
-        var deferred = $.Deferred<boolean>();
+        let deferred = $.Deferred<boolean>();
 
-        if ($("#wiid").val() != "") {
-            var customSettings = this.getCustomSettings();
-
+        if ($("#wiid").val() !== "") {
             this.clientwi.getWorkItem($("#wiid").val()).then((wi) => {
                 deferred.resolve(true);
             }, (reject) => {
@@ -99,22 +87,19 @@ export class Configuration {
         return deferred.promise();
     }
 
-
-
-
     public getCustomSettings() {
-        var result = { data: JSON.stringify(<ISettings>{ wiId: $("#wiid").val() }) };
+        let result = { data: JSON.stringify(<ISettings>{ wiId: $("#wiid").val() }) };
         return result;
     }
 
     public onSave() {
 
-        if ($("#wiid").val() != "") {
-            var customSettings = this.getCustomSettings();
+        if ($("#wiid").val() !== "") {
+            let customSettings = this.getCustomSettings();
             return this.WidgetHelpers.WidgetConfigurationSave.Valid(customSettings);
 
         } else {
-            var $errorSingleLineInput = $("#linewi .validation-error-text");
+            let $errorSingleLineInput = $("#linewi .validation-error-text");
             $errorSingleLineInput.text("This Work item Id is required");
             $errorSingleLineInput.parent().css("visibility", "visible");
             return this.WidgetHelpers.WidgetConfigurationSave.Invalid();
@@ -122,13 +107,12 @@ export class Configuration {
     }
 }
 
-
 VSS.require(["TFS/Dashboards/WidgetHelpers"], (WidgetHelpers) => {
     WidgetHelpers.IncludeWidgetConfigurationStyles();
     VSS.register("widetailswidget-Configuration", () => {
-        var configuration = new Configuration(WidgetHelpers);
+        let configuration = new Configuration(WidgetHelpers);
         return configuration;
-    })
+    });
 
     VSS.notifyLoadSucceeded();
 });
