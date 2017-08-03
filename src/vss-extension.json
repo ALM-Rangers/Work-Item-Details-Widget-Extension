@@ -1,11 +1,14 @@
 {
   "manifestVersion": 1,
-  "id": "WIDetailsWidgetTest",
-  "version": "1.15.9",
-  "name": "WI Details Widget Test",
-  "scopes": [ "vso.work", "vso.dashboards_manage" ],
+  "id": "",
+  "version": "",
+  "name": "",
+  "publisher": "",
+  "scopes": [
+    "vso.work",
+    "vso.dashboards_manage"
+  ],
   "description": "View details of work item on your dashboard.",
-  "publisher": "DevMikaelKrief",
   "icons": {
     "default": "static/images/logo.png"
   },
@@ -119,19 +122,22 @@
             "columnSpan": 2
           }
         ],
-        "supportedScopes": [ "project_team" ]
+        "supportedScopes": [
+          "project_team"
+        ]
       }
     },
     {
       "id": "widetailswidget-Configuration",
       "type": "ms.vss-dashboards-web.widget-configuration",
-      "targets": [ "ms.vss-dashboards-web.widget-configuration" ],
+      "targets": [
+        "ms.vss-dashboards-web.widget-configuration"
+      ],
       "properties": {
         "name": "Work Item Details Configuration",
         "description": "Configure Work Item Details widget.",
         "uri": "static/configuration.html"
       }
     }
-
   ]
 }
