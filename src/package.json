@@ -1,15 +1,14 @@
 {
   "scripts": {
-    "build": "npm run copy-lib && npm run lint && npm run clean-before-build && npm run webpack && npm run copy-config",
+    "build": "npm run copy-lib && npm run lint && npm run clean-before-build && npm run webpack",
     "postbuild": "npm run clean-after-build",
     "copy-lib": "cpx node_modules/telemetryclient-team-services-extension/lib/*.* scripts",
     "package": "tfx extension create  --rev-version",
-    "gallery-publish": "tfx extension publish --rev-version --token 53plbqfsibqnynajzc3ac2gvayqdaz2kz65bv7a47nmjduwmbruq",
+    "gallery-publish": "tfx extension publish --rev-version",
     "clean-before-build": "rimraf ./dist && rimraf ./*.vsix",
     "clean-after-build": "rimraf ./scripts/telemetryclient.js && rimraf ./scripts/telemetryclient.d.ts",
     "lint": "tslint -c tslint.json \"scripts/*.ts",
-    "webpack": "webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
-    "copy-config": "cpx scripts/appConfig.json dist"
+    "webpack": "webpack --progress --colors --config webpack.config.js --output-path ./dist -p"
   },
   "devDependencies": {
     "tfx-cli": "^0.4.5",
@@ -20,7 +19,6 @@
     "ts-loader": "^2.0.3",
     "tslint": "^4.3.1",
     "tslint-loader": "^3.3.0",
-    "json-loader": "^0.5.7",
     "webpack": "^1.14.0"
   },
   "dependencies": {

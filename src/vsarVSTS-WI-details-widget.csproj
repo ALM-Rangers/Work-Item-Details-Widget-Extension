@@ -66,9 +66,6 @@
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="scripts\appConfig.json" />
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>

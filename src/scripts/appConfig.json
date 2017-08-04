@@ -1,9 +1,0 @@
-{
-    "ApplicationInsights": {
-        "InstrumentationKey": "__INSTRUMENTATIONKEY__",
-        "ExtensionContext": "WorkItemDetailsWidget",
-        "DisableTelemetry": "false",
-        "DisableAjaxTracking": "__disableAjaxTracking__",
-        "EnableDebug": "__enableDebug__"
-    }
-}

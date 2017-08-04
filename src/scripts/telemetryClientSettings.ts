@@ -11,12 +11,11 @@
 // ---------------------------------------------------------------------
 
 import * as tc from "telemetryclient-team-services-extension";
-let config = require("./appConfig.json");
 
 export const settings: tc.TelemetryClientSettings = {
-    key: config.ApplicationInsights.InstrumentationKey,
-    extensioncontext: config.ApplicationInsights.ExtensionContext,
-    disableTelemetry: config.ApplicationInsights.DisableTelemetry,
-    disableAjaxTracking: config.ApplicationInsights.DisableAjaxTracking,
-    enableDebug: config.ApplicationInsights.EnableDebug
+    key: "__INSTRUMENTATIONKEY__",
+    extensioncontext: "WorkItemDetailsWidget",
+    disableTelemetry: "false",
+    disableAjaxTracking: "__disableAjaxTracking__",
+    enableDebug: "__enableDebug__"
 };

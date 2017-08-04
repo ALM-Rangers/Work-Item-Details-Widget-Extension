@@ -3,12 +3,12 @@
   "id": "",
   "version": "",
   "name": "",
-  "publisher": "",
   "scopes": [
     "vso.work",
     "vso.dashboards_manage"
   ],
   "description": "View details of work item on your dashboard.",
+  "publisher": "",
   "icons": {
     "default": "static/images/logo.png"
   },
