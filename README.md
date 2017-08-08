@@ -6,7 +6,7 @@ The **Work Item Details Widget** displays a card with some details of an Work it
 
 ![detailed cards](src/img/detailed-cards.png)
 
-## Quick steps to get started ###
+## Quick steps to get started
 
 ### Method 1
 
@@ -35,14 +35,14 @@ The **Work Item Details Widget** displays a card with some details of an Work it
 - You can select multiple work items in a list
 - On the dashboard, click on the widget to open the work item in a modal form 
 
-## Contributors ###
+## Contributors
 We thank the following contributor(s) for this extension: Mikael Krief.
 
 ## Notices
 Notices for certain third party software included in this solution are provided here: [Third Party Notice](ThirdPartyNotices.txt).
 
-##Contribute
-Contributions to Folder Management are welcome. Here is how you can contribute to Folder Management:  
+## Contribute
+Contributions to Work Item Details Widget are welcome. Here is how you can contribute to Work Item Details Widget:  
 
 - Submit bugs and help us verify fixes  
 - Submit pull requests for bug fixes and features and discuss existing proposals   
