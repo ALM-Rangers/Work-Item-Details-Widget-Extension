@@ -8,4 +8,4 @@ Changes proposed in this pull request:
 - 
 - 
 
-@ALM-Rangers/workitemdetails
+@ALM-Rangers/Work-Item-Details-Widget-Extension
