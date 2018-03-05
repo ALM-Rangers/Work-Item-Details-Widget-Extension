@@ -3,11 +3,14 @@
   "id": "",
   "version": "",
   "name": "",
-  "scopes": [ "vso.work", "vso.dashboards_manage" ],
+  "scopes": [
+    "vso.work",
+    "vso.dashboards_manage"
+  ],
   "description": "View details of work item on your dashboard.",
   "publisher": "",
   "icons": {
-    "default": "img/logo.png"
+    "default": "static/images/logo.png"
   },
   "categories": [
     "Plan and track"
@@ -54,32 +57,36 @@
       "addressable": true
     },
     {
-      "path": "css",
-      "addressable": true
-    },
-    {
-      "path": "img",
-      "addressable": true
-    },
-    {
-      "path": "scripts",
-      "addressable": true
-    },
-    {
-      "path": "index.html",
-      "addressable": true
-    },
-    {
-      "path": "configuration.html",
-      "addressable": true
-    },
-    {
-      "path": "addtodashboard.html",
-      "addressable": true
-    },
-    {
       "path": "ThirdPartyNotices.txt",
       "addressable": true
+    },
+    {
+      "path": "dist",
+      "addressable": true
+    },
+    {
+      "path": "static",
+      "addressable": true
+    },
+    {
+      "path": "node_modules/vss-web-extension-sdk/lib",
+      "addressable": true,
+      "packagePath": "lib"
+    },
+    {
+      "path": "node_modules/applicationinsights-js/dist",
+      "addressable": true,
+      "packagePath": "lib"
+    },
+    {
+      "path": "node_modules/jquery/dist",
+      "addressable": true,
+      "packagePath": "lib"
+    },
+    {
+      "path": "node_modules/jquery-dotdotdot/src",
+      "addressable": true,
+      "packagePath": "lib"
     }
   ],
   "contributions": [
@@ -92,7 +99,7 @@
       ],
       "properties": {
         "group": "contributed",
-        "uri": "addtodashboard.html"
+        "uri": "static/addtodashboard.html"
       }
     },
     {
@@ -105,29 +112,32 @@
       "properties": {
         "name": "Work Item Details",
         "description": "View details of work item on your dashboard.",
-        "uri": "index.html",
+        "uri": "static/index.html",
         "isNameConfigurable": false,
-        "catalogIconUrl:": "img/logo.png",
-        "previewImageUrl": "img/logo.png",
+        "catalogIconUrl:": "static/images/logo.png",
+        "previewImageUrl": "static/images/logo.png",
         "supportedSizes": [
           {
             "rowSpan": 1,
             "columnSpan": 2
           }
         ],
-        "supportedScopes": [ "project_team" ]
+        "supportedScopes": [
+          "project_team"
+        ]
       }
     },
     {
       "id": "widetailswidget-Configuration",
       "type": "ms.vss-dashboards-web.widget-configuration",
-      "targets": [ "ms.vss-dashboards-web.widget-configuration" ],
+      "targets": [
+        "ms.vss-dashboards-web.widget-configuration"
+      ],
       "properties": {
         "name": "Work Item Details Configuration",
         "description": "Configure Work Item Details widget.",
-        "uri": "configuration.html"
+        "uri": "static/configuration.html"
       }
     }
-
   ]
 }

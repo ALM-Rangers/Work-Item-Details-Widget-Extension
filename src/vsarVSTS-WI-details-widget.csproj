@@ -10,7 +10,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort>44313</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
@@ -23,39 +23,38 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".vscode\tasks.json" />
-    <Content Include="addtodashboard.html" />
-    <Content Include="configuration.html" />
-    <Content Include="gruntfile.js" />
     <Content Include="img\adddashboard.png" />
     <Content Include="img\overview_edit.png" />
-    <Content Include="index.html" />
-    <Content Include="scripts\ai.0.22.19-build00125.js" />
-    <Content Include="scripts\ai.0.22.19-build00125.min.js" />
-    <Content Include="scripts\jquery-2.2.0.min.js" />
-    <Content Include="scripts\jquery.dotdotdot.min.js" />
+    <Content Include="static\addtodashboard.html" />
+    <Content Include="static\configuration.html" />
+    <Content Include="static\css\app.css" />
+    <Content Include="static\images\add-dashboard.png" />
+    <Content Include="static\images\add-widget-steps.png" />
+    <Content Include="static\images\add-widget.png" />
+    <Content Include="static\images\adddashboard.png" />
+    <Content Include="static\images\configure.png" />
+    <Content Include="static\images\context.png" />
+    <Content Include="static\images\detailed-cards.png" />
+    <Content Include="static\images\logo.png" />
+    <Content Include="static\images\overview_edit.png" />
+    <Content Include="static\images\unconfigured-small.png" />
+    <Content Include="static\images\wi-id-configuration.png" />
+    <Content Include="static\index.html" />
     <Content Include="ThirdPartyNotices.txt" />
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\app.css" />
     <Content Include="img\logo.png" />
     <Content Include="img\unconfigured-small.png" />
-    <Content Include="scripts\VSS.SDK.js" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="scripts\ai.0.22.19-build00125.d.ts" />
-    <TypeScriptCompile Include="scripts\app.ts" />
     <TypeScriptCompile Include="scripts\configuration.ts" />
     <TypeScriptCompile Include="scripts\isettings.d.ts" />
     <TypeScriptCompile Include="scripts\jquery.dotdotdot.d.ts" />
-    <TypeScriptCompile Include="scripts\main.ts" />
     <TypeScriptCompile Include="scripts\menu.ts" />
-    <TypeScriptCompile Include="scripts\ref\tfs.d.ts" />
-    <TypeScriptCompile Include="scripts\ref\vss.d.ts" />
-    <TypeScriptCompile Include="scripts\TelemetryClient.ts" />
-    <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
-    <TypeScriptCompile Include="typings\knockout\knockout.d.ts" />
-    <TypeScriptCompile Include="typings\q\q.d.ts" />
-    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="scripts\telemetryClientSettings.ts" />
+    <TypeScriptCompile Include="scripts\WIDetailsWidget.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="mp_terms.md" />
@@ -64,16 +63,8 @@
     <Content Include="vss-extension.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="web.config" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>

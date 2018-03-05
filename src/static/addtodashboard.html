@@ -19,25 +19,18 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
-    <script src="scripts/VSS.SDK.js"></script>
-    <script src="scripts/ai.0.22.19-build00125.min.js"></script>
-    <script src="scripts/TelemetryClient.js"></script>
+    <script src="../lib/VSS.SDK.js"></script>
+    <script src="../lib/ai.0.js"></script>
 </head>
 <body>
     <script>
         VSS.init({
             explicitNotifyLoaded: true,
-            usePlatformScripts: true,
-            moduleLoaderConfig: {
-                paths: {
-                    "Scripts": "scripts"
-                }
-            }
-            
+            usePlatformScripts: true
         });
 
         VSS.ready(function () {
-            require(["Scripts/menu"], function (menu) {
+            require(["dist/menu"], function (menu) {
                 // Loading succeeded
                 VSS.notifyLoadSucceeded();
             });

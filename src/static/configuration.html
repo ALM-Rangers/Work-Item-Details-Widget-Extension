@@ -13,6 +13,7 @@
 -->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <link href="css/app.css" rel="stylesheet" />
 </head>
@@ -25,29 +26,24 @@
             <input type="text" id="wiid" required>
             <span class="validation-error">
                 <span class="icon-error-exclamation"></span>
-                <span class="validation-error-text"></span>
+            <span class="validation-error-text"></span>
             </span>
         </div>
     </div>
-    <script src="scripts/VSS.SDK.js"></script>
-    <script src="scripts/ai.0.22.19-build00125.min.js"></script>
-    <script src="scripts/TelemetryClient.js"></script>
+    <script src="../lib/VSS.SDK.js"></script>
+    <script src="../lib/ai.0.js"></script>
     <script type="text/javascript">
         VSS.init({
             explicitNotifyLoaded: true,
             usePlatformStyles: true,
             usePlatformScripts: true,
-            setupModuleLoader: true,
-            moduleLoaderConfig: {
-                paths: {
-                    "Scripts": "scripts"
-                }
-            }
+            setupModuleLoader: true
         });
 
         VSS.ready(function () {
-            require(["Scripts/configuration"], function (configuration) { });
+            require(["dist/configuration"], function (configuration) { });
         });
     </script>
 </body>
+
 </html>
