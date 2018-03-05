@@ -16,3 +16,4 @@ src/bin
 /.vs
 /src/vsarVSTS-WI-details-widget.csproj.user
 src/dist
+/Sync.cmd
