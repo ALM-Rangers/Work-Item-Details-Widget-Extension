@@ -92,7 +92,7 @@ export class WidgetWIDetails {
 
         $("#wi-header").attr("style", "border-left-color: " + color + ";");
         $("#wi-type").html(witype + " " + wi.id);
-        $("#wi-title").html(wititle);
+        $("#wi-title").text(wititle);
         let desc = wi.fields["System.Description"];
         if (witype === "Bug") {
             desc = wi.fields["Microsoft.VSTS.TCM.ReproSteps"];
