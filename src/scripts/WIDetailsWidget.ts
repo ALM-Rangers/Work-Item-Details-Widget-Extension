@@ -86,12 +86,13 @@ export class WidgetWIDetails {
     private DisplayWIDetails(wi: WorkItemsContracts.WorkItem) {
 
         let witype = wi.fields["System.WorkItemType"];
+        let wititle = wi.fields["System.Title"];
 
         let color = this.getWorkItemColor(witype);
 
         $("#wi-header").attr("style", "border-left-color: " + color + ";");
         $("#wi-type").html(witype + " " + wi.id);
-        $("#wi-title").html(wi.fields["System.Title"]);
+        $("#wi-title").text(wititle);
         let desc = wi.fields["System.Description"];
         if (witype === "Bug") {
             desc = wi.fields["Microsoft.VSTS.TCM.ReproSteps"];
