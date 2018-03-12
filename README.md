@@ -4,7 +4,7 @@
 
 The **Work Item Details Widget** displays a card with some details of an Work item on your dashboards.
 
-![detailed cards](src/img/detailed-cards.png)
+![detailed cards](src/static/images/detailed-cards.png)
 
 ## Quick steps to get started
 
@@ -15,12 +15,12 @@ The **Work Item Details Widget** displays a card with some details of an Work it
 - Click Add to add the widget to your dashboard [3]
 - Click Configure on the widget [4]
 
-![add widget](src/img/add-widget-steps.png)
+![add widget](src/static/images/add-widget-steps.png)
 
 - Enter a Work Item Id and tab out of the text box [5]
 - Click on Save [6]
 
-![add wi](src/img/wi-id-configuration.png)
+![add wi](src/static/images/wi-id-configuration.png)
 
 ### Method 2
 
@@ -28,7 +28,7 @@ The **Work Item Details Widget** displays a card with some details of an Work it
 - Select the item 'Add to dashboard' [2]
 - Select the desired dashboard [3]
 
-![add to dashboard](src/img/add-dashboard.png)
+![add to dashboard](src/static/images/add-dashboard.png)
 
 ### Notes
 
@@ -48,3 +48,10 @@ Contributions to Work Item Details Widget are welcome. Here is how you can contr
 - Submit pull requests for bug fixes and features and discuss existing proposals   
 
 Please refer to [Contribution guidelines](.github/CONTRIBUTING.md) and the [Code of Conduct](.github/COC.md) for more details.
+
+## Data/Telemetry
+This project collects usage data and sends it to Microsoft to help Microsoft improve its products and services. For more information about how Microsoft uses telemetry data, read the Microsoft [privacy statement](http://go.microsoft.com/fwlink/?LinkId=521839). 
+
+This telemetry is used for A|B testing and troubleshooting. 
+
+To turn off telemetry you need to fork this repo, publish, and use your own version of the project without replacing the \_\_InstrumentationKey\_\_ configuration key.
